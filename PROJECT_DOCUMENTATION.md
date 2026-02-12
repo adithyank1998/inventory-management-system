@@ -695,12 +695,6 @@ Transaction Summary:
 **Role:** Aspiring Python Developer
 **GitHub:** https://github.com/adithyank1998
 
-### Acknowledgments
-- Python Software Foundation for Python
-- SQLite Development Team
-- Stack Overflow Community
-- [Any mentors or instructors]
-
 ---
 
 ## License
@@ -720,8 +714,7 @@ This project is developed for academic purposes.
 ### Getting Help
 1. Review [USAGE_GUIDE.md](USAGE_GUIDE.md)
 2. Check [DATABASE_SCHEMA.md](DATABASE_SCHEMA.md)
-3. See [BUG_REPORT.md](BUG_REPORT.md)
-4. Contact project maintainer
+3. Contact project maintainer
 
 ### Reporting Issues
 Please include:
@@ -747,7 +740,6 @@ We welcome feedback on:
 - `README.md` - Quick start guide
 - `USAGE_GUIDE.md` - Detailed user manual
 - `DATABASE_SCHEMA.md` - Database documentation
-- `BUG_REPORT.md` - Issues and fixes
 - `REQUIREMENTS.txt` - System requirements
 - `PROJECT_DOCUMENTATION.md` - This file
 
