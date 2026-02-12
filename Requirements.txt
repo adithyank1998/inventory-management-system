@@ -1,0 +1,16 @@
+# Python Version Requirement
+Python>=3.6
+
+# Standard Library Modules (No installation needed - comes with Python)
+sqlite3
+csv
+datetime
+
+# Note: This project uses only Python standard library modules.
+# No external packages need to be installed via pip.
+
+# System Requirements:
+# - Python 3.6 or higher
+# - Any operating system (Windows, macOS, Linux)
+# - Terminal/Command Prompt access
+# - Minimum 10MB free disk space

@@ -8,8 +8,11 @@
 5. [Architecture & Design](#architecture--design)
 6. [Database Schema](#database-schema)
 7. [User Roles & Permissions](#user-roles--permissions)
-8. [Testing & Validation](#testing--validation)
-9. [Future Enhancements](#future-enhancements)
+8. [Screenshots & Demo](#screenshots--demo)
+9. [Testing & Validation](#testing--validation)
+10. [Future Enhancements](#future-enhancements)
+11. [Contributors](#contributors)
+12. [License](#license)
 
 ---
 
@@ -44,38 +47,38 @@ February 2026
 
 ### Admin Features
 1. **Product Management**
-   - ✅ Add new products with detailed information
-   - ✅ View complete product inventory
-   - ✅ Update product details (name, price, category, etc.)
-   - ✅ Delete products from inventory
+   - Add new products with detailed information
+   - View complete product inventory
+   - Update product details (name, price, category, etc.)
+   - Delete products from inventory
 
 2. **Transaction Management**
-   - ✅ View all system transactions
-   - ✅ Export transaction history to CSV
-   - ✅ Track stock movements (IN/OUT)
+   - View all system transactions
+   - Export transaction history to CSV
+   - Track stock movements (IN/OUT)
 
 3. **Reporting & Analytics**
-   - ✅ Low stock alerts and monitoring
-   - ✅ Inventory summary reports
-   - ✅ Total inventory valuation
+   - Low stock alerts and monitoring
+   - Inventory summary reports
+   - Total inventory valuation
 
 4. **User Management**
-   - ✅ Create staff user accounts
-   - ✅ Manage access controls
+   - Create staff user accounts
+   - Manage access controls
 
 ### Staff Features
 1. **Inventory Operations**
-   - ✅ View product catalog
-   - ✅ Stock IN (receive inventory)
-   - ✅ Stock OUT (issue/sell items)
+   - View product catalog
+   - Stock IN (receive inventory)
+   - Stock OUT (issue/sell items)
 
 2. **Personal Tracking**
-   - ✅ View personal transaction history
-   - ✅ Monitor low stock items
+   - View personal transaction history
+   - Monitor low stock items
 
 3. **Stock Management**
-   - ✅ Real-time stock validation
-   - ✅ Automatic transaction logging
+   - Real-time stock validation
+   - Automatic transaction logging
 
 ### Security Features
 - Role-based access control (Admin/Staff)
@@ -391,29 +394,29 @@ CREATE TABLE inventory_transactions (
 
 ---
 
-## 👥 User Roles & Permissions
+## User Roles & Permissions
 
 ### Role Matrix
 
 | Feature | Admin | Staff |
 |---------|-------|-------|
 | **Product Management** |
-| Add Product | ✅ | ❌ |
-| View Products | ✅ | ✅ |
-| Update Product | ✅ | ❌ |
-| Delete Product | ✅ | ❌ |
+| Add Product | Yes | No |
+| View Products | Yes | Yes |
+| Update Product | Yes | No |
+| Delete Product | Yes | No |
 | **Stock Operations** |
-| Stock IN | ✅ | ✅ |
-| Stock OUT | ✅ | ✅ |
+| Stock IN | Yes | Yes |
+| Stock OUT | Yes | Yes |
 | **Transactions** |
-| View All Transactions | ✅ | ❌ |
-| View My Transactions | ✅ | ✅ |
-| Export to CSV | ✅ | ❌ |
+| View All Transactions | Yes | No |
+| View My Transactions | Yes | Yes |
+| Export to CSV | Yes | No |
 | **Reports** |
-| Low Stock Alerts | ✅ | ✅ |
-| Inventory Summary | ✅ | ❌ |
+| Low Stock Alerts | Yes | Yes |
+| Inventory Summary | Yes | No |
 | **User Management** |
-| Create Staff Users | ✅ | ❌ |
+| Create Staff Users | Yes | No |
 
 ### Role Descriptions
 
@@ -433,6 +436,142 @@ CREATE TABLE inventory_transactions (
 
 ---
 
+## Screenshots & Demo
+
+### Login Screen
+```
+============================================================
+                INVENTORY MANAGEMENT SYSTEM
+============================================================
+
+Welcome! Please login to continue.
+
+Username: admin
+Password: ********
+
+✓ Login successful! Welcome, admin (Admin)
+```
+
+### Admin Menu
+```
+==================================================
+ADMIN MENU - admin
+==================================================
+1. Add Product
+2. View All Products
+3. Update Product
+4. Delete Product
+5. View All Transactions
+6. Export Transactions to CSV
+7. Low Stock Alerts
+8. Inventory Summary Report
+9. Create Staff User
+10. Logout
+==================================================
+Enter your choice: 
+```
+
+### Product List View
+```
+====================================================================================================
+PRODUCT INVENTORY
+====================================================================================================
+ID     Name                 Category        Price      Stock    Supplier        Min Stock  
+----------------------------------------------------------------------------------------------------
+1      Laptop               Electronics     ₹45000.00  50       TechSupply Inc  10         
+2      Mouse                Electronics     ₹500.00    200      TechSupply Inc  50         
+3      Keyboard             Electronics     ₹1500.00   95       TechSupply Inc  30         
+4      Monitor              Electronics     ₹12000.00  25       DisplayCo       5          
+====================================================================================================
+Total Products: 4
+```
+
+### Stock IN Operation
+```
+Enter Product ID: 1
+Enter quantity to add: 25
+
+✓ Stock added successfully!
+  Product: Laptop
+  Quantity Added: 25
+  Previous Stock: 50
+  New Stock: 75
+```
+
+### Low Stock Alert
+```
+================================================================================
+⚠ LOW STOCK ALERTS
+================================================================================
+ID     Product                   Category        Stock    Min Required
+--------------------------------------------------------------------------------
+5      Keyboard                  Electronics     8        30          
+2      Mouse                     Electronics     45       50          
+================================================================================
+Total Low Stock Items: 2
+```
+
+### Inventory Summary Report
+```
+============================================================
+INVENTORY SUMMARY REPORT
+============================================================
+Total Products: 15
+Total Inventory Value: ₹1,250,000.00
+Low Stock Items: 2
+
+Transaction Summary:
+  IN: 45 transactions, 2,350 total units
+  OUT: 38 transactions, 1,890 total units
+============================================================
+```
+
+### How to Create Demo Video
+
+**Recommended Tools:**
+- **Windows:** OBS Studio, Xbox Game Bar
+- **macOS:** QuickTime Player, Screen Recording
+- **Linux:** SimpleScreenRecorder, OBS Studio
+
+**Demo Script (5-7 minutes):**
+
+1. **Introduction (30 sec)**
+   - Project name and purpose
+   - Show project structure
+
+2. **Installation (1 min)**
+   - Show Python version check
+   - Run application
+   - First-time setup
+
+3. **Admin Features Demo (3 min)**
+   - Login as admin
+   - Add a product
+   - View products
+   - Check low stock alerts
+   - View all transactions
+   - Export to CSV
+   - Create staff user
+
+4. **Staff Features Demo (2 min)**
+   - Logout and login as staff
+   - Perform Stock IN
+   - Perform Stock OUT
+   - View personal transactions
+
+5. **Closing (30 sec)**
+   - Show generated files
+   - Summary of features
+   - Thank you
+
+**Video Format:**
+- **Resolution:** 1920x1080 (1080p) or 1280x720 (720p)
+- **Length:** 5-7 minutes
+- **Format:** MP4, AVI, or MOV
+- **Upload:** YouTube (unlisted), Google Drive, or institution platform
+
+---
+
 ## Testing & Validation
 
 ### Test Cases Executed
@@ -440,21 +579,21 @@ CREATE TABLE inventory_transactions (
 #### Authentication Tests
 | Test Case | Expected Result | Status |
 |-----------|----------------|--------|
-| Admin login with correct credentials | Login successful | ✅ Pass |
-| Staff login with correct credentials | Login successful | ✅ Pass |
-| Login with invalid credentials | Login denied | ✅ Pass |
-| Maximum login attempts (3) | System exit | ✅ Pass |
-| Create duplicate staff username | Error message | ✅ Pass |
+| Admin login with correct credentials | Login successful | Pass |
+| Staff login with correct credentials | Login successful | Pass |
+| Login with invalid credentials | Login denied | Pass |
+| Maximum login attempts (3) | System exit | Pass |
+| Create duplicate staff username | Error message | Pass |
 
 #### Product Management Tests
 | Test Case | Expected Result | Status |
 |-----------|----------------|--------|
-| Add product with valid data | Product created | ✅ Pass |
-| Add product with negative price | Error message | ✅ Pass |
-| Add product with empty name | Error message | ✅ Pass |
-| Update product details | Changes saved | ✅ Pass |
-| Delete product with confirmation | Product removed | ✅ Pass |
-| View all products | Complete list displayed | ✅ Pass |
+| Add product with valid data | Product created | Pass |
+| Add product with negative price | Error message | Pass |
+| Add product with empty name | Error message | Pass |
+| Update product details | Changes saved | Pass |
+| Delete product with confirmation | Product removed | Pass |
+| View all products | Complete list displayed | Pass |
 
 #### Stock Operation Tests
 | Test Case | Expected Result | Status |
@@ -468,31 +607,32 @@ CREATE TABLE inventory_transactions (
 #### Reporting Tests
 | Test Case | Expected Result | Status |
 |-----------|----------------|--------|
-| View all transactions | Complete history | ✅ Pass |
-| View user transactions only | Filtered list | ✅ Pass |
-| Export to CSV | File created | ✅ Pass |
-| Low stock alerts | Correct items shown | ✅ Pass |
-| Inventory summary | Accurate calculations | ✅ Pass |
+| View all transactions | Complete history | Pass |
+| View user transactions only | Filtered list | Pass |
+| Export to CSV | File created | Pass |
+| Low stock alerts | Correct items shown | Pass |
+| Inventory summary | Accurate calculations | Pass |
 
 ### Validation Checks
 
-**Input Validation**
+- **Input Validation**
 - Non-negative prices
 - Non-negative quantities
 - Required fields not empty
 - Valid data types
 
-**Business Logic Validation**
+- **Business Logic Validation**
 - Sufficient stock for OUT operations
 - Unique usernames
 - Valid product references
 - Proper role restrictions
 
-**Database Integrity**
+- **Database Integrity**
 - Foreign key constraints
 - Check constraints
 - Primary key uniqueness
 - NOT NULL enforcement
+
 
 ---
 
@@ -500,66 +640,66 @@ CREATE TABLE inventory_transactions (
 
 ### Short-term Improvements
 1. **Security**
-   - [ ] Password hashing (bcrypt/argon2)
-   - [ ] Password strength requirements
-   - [ ] Session timeout implementation
-   - [ ] Audit log for admin actions
+   - Password hashing (bcrypt/argon2)
+   - Password strength requirements
+   - Session timeout implementation
+   - Audit log for admin actions
 
 2. **User Experience**
-   - [ ] Search/filter products
-   - [ ] Pagination for large lists
-   - [ ] Batch operations
-   - [ ] Confirmation for all destructive actions
+   - Search/filter products
+   - Pagination for large lists
+   - Batch operations
+   - Confirmation for all destructive actions
 
 3. **Reporting**
-   - [ ] Date range filters
-   - [ ] Product-wise sales reports
-   - [ ] User activity reports
-   - [ ] Custom report builder
+   - Date range filters
+   - Product-wise sales reports
+   - User activity reports
+   - Custom report builder
 
 ### Medium-term Enhancements
 1. **Features**
-   - [ ] Product categories as separate table
-   - [ ] Supplier management module
-   - [ ] Barcode/SKU support
-   - [ ] Multi-location inventory
-   - [ ] Email notifications for low stock
+   - Product categories as separate table
+   - Supplier management module
+   - Barcode/SKU support
+   - Multi-location inventory
+   - Email notifications for low stock
 
 2. **Technical**
-   - [ ] Database migrations
-   - [ ] Automated backups
-   - [ ] Configuration file (config.ini)
-   - [ ] Logging framework
-   - [ ] Unit tests
+   - Database migrations
+   - Automated backups
+   - Configuration file (config.ini)
+   - Logging framework
+   - Unit tests
 
 ### Long-term Vision
 1. **Architecture**
-   - [ ] Web-based interface (Flask/Django)
-   - [ ] REST API
-   - [ ] Mobile application
-   - [ ] Real-time dashboard
-   - [ ] Multi-user concurrent access
+   - Web-based interface (Flask/Django)
+   - REST API
+   - Mobile application
+   - Real-time dashboard
+   - Multi-user concurrent access
 
 2. **Advanced Features**
-   - [ ] Predictive stock alerts (ML)
-   - [ ] Sales analytics and trends
-   - [ ] Integration with accounting software
-   - [ ] Purchase order management
-   - [ ] Customer management
+   - Predictive stock alerts (ML)
+   - Sales analytics and trends
+   - Integration with accounting software
+   - Purchase order management
+   - Customer management
 
 ---
 
 ## Contributors
 
-**Developer:** Adithya Krishnan  
+**Developer:** Adithya Krihsnan 
 **Role:** Aspiring Python Developer
 **GitHub:** https://github.com/adithyank1998
-
 
 ### Acknowledgments
 - Python Software Foundation for Python
 - SQLite Development Team
 - Stack Overflow Community
+- [Any mentors or instructors]
 
 ---
 
@@ -580,7 +720,25 @@ This project is developed for academic purposes.
 ### Getting Help
 1. Review [USAGE_GUIDE.md](USAGE_GUIDE.md)
 2. Check [DATABASE_SCHEMA.md](DATABASE_SCHEMA.md)
-3. Contact project maintainer
+3. See [BUG_REPORT.md](BUG_REPORT.md)
+4. Contact project maintainer
+
+### Reporting Issues
+Please include:
+- Python version
+- Operating system
+- Error messages (complete text)
+- Steps to reproduce
+- Expected vs actual behavior
+
+### Feedback
+We welcome feedback on:
+- Feature suggestions
+- Bug reports
+- Documentation improvements
+- User experience
+- Code quality
+
 ---
 
 ## Additional Resources
@@ -589,6 +747,8 @@ This project is developed for academic purposes.
 - `README.md` - Quick start guide
 - `USAGE_GUIDE.md` - Detailed user manual
 - `DATABASE_SCHEMA.md` - Database documentation
+- `BUG_REPORT.md` - Issues and fixes
+- `REQUIREMENTS.txt` - System requirements
 - `PROJECT_DOCUMENTATION.md` - This file
 
 ### External Resources
@@ -630,6 +790,7 @@ This project demonstrates:
 **Document Version:** 1.0  
 **Last Updated:** February 12, 2026  
 **Project Version:** 2.0  
+
 ---
 
 **END OF PROJECT DOCUMENTATION**
