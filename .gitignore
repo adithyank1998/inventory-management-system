@@ -7,3 +7,6 @@ __pycache__/
 
 # OS files
 .DS_Store
+
+#export fn
+inventory_transactions.csv
