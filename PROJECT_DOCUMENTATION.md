@@ -1,6 +1,6 @@
 # Inventory Management System - Complete Project Documentation
 
-## 📋 Table of Contents
+## Table of Contents
 1. [Project Overview](#project-overview)
 2. [Features & Functionality](#features--functionality)
 3. [System Requirements](#system-requirements)
@@ -8,15 +8,12 @@
 5. [Architecture & Design](#architecture--design)
 6. [Database Schema](#database-schema)
 7. [User Roles & Permissions](#user-roles--permissions)
-8. [Screenshots & Demo](#screenshots--demo)
-9. [Testing & Validation](#testing--validation)
-10. [Future Enhancements](#future-enhancements)
-11. [Contributors](#contributors)
-12. [License](#license)
+8. [Testing & Validation](#testing--validation)
+9. [Future Enhancements](#future-enhancements)
 
 ---
 
-## 🎯 Project Overview
+## Project Overview
 
 ### Description
 The **Inventory Management System** is a command-line application built with Python and SQLite3 that enables businesses to efficiently manage their product inventory, track stock movements, and generate reports. The system implements role-based access control with separate functionalities for administrators and staff members.
@@ -43,9 +40,9 @@ February 2026
 
 ---
 
-## ✨ Features & Functionality
+## Features & Functionality
 
-### 👨‍💼 Admin Features
+### Admin Features
 1. **Product Management**
    - ✅ Add new products with detailed information
    - ✅ View complete product inventory
@@ -66,7 +63,7 @@ February 2026
    - ✅ Create staff user accounts
    - ✅ Manage access controls
 
-### 👨‍💻 Staff Features
+### Staff Features
 1. **Inventory Operations**
    - ✅ View product catalog
    - ✅ Stock IN (receive inventory)
@@ -80,14 +77,14 @@ February 2026
    - ✅ Real-time stock validation
    - ✅ Automatic transaction logging
 
-### 🔒 Security Features
+### Security Features
 - Role-based access control (Admin/Staff)
 - Login authentication
 - Maximum login attempt limits
 - SQL injection prevention (parameterized queries)
 - Data validation and constraints
 
-### 📊 Reporting Features
+### Reporting Features
 - CSV export for external analysis
 - Comprehensive transaction logging
 - Inventory valuation reports
@@ -96,7 +93,7 @@ February 2026
 
 ---
 
-## 💻 System Requirements
+## System Requirements
 
 ### Hardware Requirements
 - **Processor:** Any modern CPU (1 GHz or higher)
@@ -121,7 +118,7 @@ February 2026
 
 ---
 
-## 🚀 Installation & Setup
+## Installation & Setup
 
 ### Step 1: Install Python
 
@@ -182,7 +179,7 @@ python3 main.py
 
 ---
 
-## 🏗️ Architecture & Design
+## Architecture & Design
 
 ### Project Structure
 ```
@@ -322,7 +319,7 @@ inventory-management-system/
 
 ---
 
-## 🗄️ Database Schema
+## Database Schema
 
 ### Entity Relationship Diagram
 
@@ -436,142 +433,6 @@ CREATE TABLE inventory_transactions (
 
 ---
 
-## 📸 Screenshots & Demo
-
-### Login Screen
-```
-============================================================
-                INVENTORY MANAGEMENT SYSTEM
-============================================================
-
-Welcome! Please login to continue.
-
-Username: admin
-Password: ********
-
-✓ Login successful! Welcome, admin (Admin)
-```
-
-### Admin Menu
-```
-==================================================
-ADMIN MENU - admin
-==================================================
-1. Add Product
-2. View All Products
-3. Update Product
-4. Delete Product
-5. View All Transactions
-6. Export Transactions to CSV
-7. Low Stock Alerts
-8. Inventory Summary Report
-9. Create Staff User
-10. Logout
-==================================================
-Enter your choice: 
-```
-
-### Product List View
-```
-====================================================================================================
-PRODUCT INVENTORY
-====================================================================================================
-ID     Name                 Category        Price      Stock    Supplier        Min Stock  
-----------------------------------------------------------------------------------------------------
-1      Laptop               Electronics     ₹45000.00  50       TechSupply Inc  10         
-2      Mouse                Electronics     ₹500.00    200      TechSupply Inc  50         
-3      Keyboard             Electronics     ₹1500.00   95       TechSupply Inc  30         
-4      Monitor              Electronics     ₹12000.00  25       DisplayCo       5          
-====================================================================================================
-Total Products: 4
-```
-
-### Stock IN Operation
-```
-Enter Product ID: 1
-Enter quantity to add: 25
-
-✓ Stock added successfully!
-  Product: Laptop
-  Quantity Added: 25
-  Previous Stock: 50
-  New Stock: 75
-```
-
-### Low Stock Alert
-```
-================================================================================
-⚠ LOW STOCK ALERTS
-================================================================================
-ID     Product                   Category        Stock    Min Required
---------------------------------------------------------------------------------
-5      Keyboard                  Electronics     8        30          
-2      Mouse                     Electronics     45       50          
-================================================================================
-Total Low Stock Items: 2
-```
-
-### Inventory Summary Report
-```
-============================================================
-INVENTORY SUMMARY REPORT
-============================================================
-Total Products: 15
-Total Inventory Value: ₹1,250,000.00
-Low Stock Items: 2
-
-Transaction Summary:
-  IN: 45 transactions, 2,350 total units
-  OUT: 38 transactions, 1,890 total units
-============================================================
-```
-
-### How to Create Demo Video
-
-**Recommended Tools:**
-- **Windows:** OBS Studio, Xbox Game Bar
-- **macOS:** QuickTime Player, Screen Recording
-- **Linux:** SimpleScreenRecorder, OBS Studio
-
-**Demo Script (5-7 minutes):**
-
-1. **Introduction (30 sec)**
-   - Project name and purpose
-   - Show project structure
-
-2. **Installation (1 min)**
-   - Show Python version check
-   - Run application
-   - First-time setup
-
-3. **Admin Features Demo (3 min)**
-   - Login as admin
-   - Add a product
-   - View products
-   - Check low stock alerts
-   - View all transactions
-   - Export to CSV
-   - Create staff user
-
-4. **Staff Features Demo (2 min)**
-   - Logout and login as staff
-   - Perform Stock IN
-   - Perform Stock OUT
-   - View personal transactions
-
-5. **Closing (30 sec)**
-   - Show generated files
-   - Summary of features
-   - Thank you
-
-**Video Format:**
-- **Resolution:** 1920x1080 (1080p) or 1280x720 (720p)
-- **Length:** 5-7 minutes
-- **Format:** MP4, AVI, or MOV
-- **Upload:** YouTube (unlisted), Google Drive, or institution platform
-
----
-
 ## Testing & Validation
 
 ### Test Cases Executed
@@ -632,9 +493,6 @@ Transaction Summary:
 - Check constraints
 - Primary key uniqueness
 - NOT NULL enforcement
-
-### Bug Fixes Applied
-See [BUG_REPORT.md](BUG_REPORT.md) for complete list of issues fixed.
 
 ---
 
@@ -723,23 +581,6 @@ This project is developed for academic purposes.
 1. Review [USAGE_GUIDE.md](USAGE_GUIDE.md)
 2. Check [DATABASE_SCHEMA.md](DATABASE_SCHEMA.md)
 3. Contact project maintainer
-
-### Reporting Issues
-Please include:
-- Python version
-- Operating system
-- Error messages (complete text)
-- Steps to reproduce
-- Expected vs actual behavior
-
-### Feedback
-We welcome feedback on:
-- Feature suggestions
-- Bug reports
-- Documentation improvements
-- User experience
-- Code quality
-
 ---
 
 ## Additional Resources
@@ -757,7 +598,7 @@ We welcome feedback on:
 
 ---
 
-## 🎓 Learning Outcomes
+## Learning Outcomes
 
 This project demonstrates:
 1. **Python Programming**
@@ -789,8 +630,6 @@ This project demonstrates:
 **Document Version:** 1.0  
 **Last Updated:** February 12, 2026  
 **Project Version:** 2.0  
-**Status:** Complete & Ready for Submission
-
 ---
 
 **END OF PROJECT DOCUMENTATION**
