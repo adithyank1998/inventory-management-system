@@ -159,10 +159,6 @@ Expected output: `Python 3.x.x`
 ### Step 3: Download Project
 
 **Option A: Git Clone**
-```bash
-git clone https://github.com/yourusername/inventory-management-system.git
-cd inventory-management-system
-```
 
 **Option B: Direct Download**
 1. Download ZIP from GitHub
